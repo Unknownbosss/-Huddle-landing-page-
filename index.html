@@ -1,185 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
- 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
-  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+    <title>
+      Frontend Mentor | Huddle landing page with single introductory section
+    </title>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Outfit:wght@100..900&display=swap');
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-image: url(images/bg-desktop.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-color: hsl(257, 40%, 49%);
-      color: white;
-    }
-
-    .logo {
-      margin: 2.5em;
-      margin-bottom: 5em;
-    }
-
-    .container {
-      display: flex;
-      gap: 4em;
-      justify-content: center;
-    }
-
-    main img {
-      width: 45%;
-    }
-
-    .text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .text h1 {
-      font-family: "Poppins", sans-serif;
-      font-weight: 700;
-      font-size: 3rem;
-      width: 13em;
-    }
-
-    .text p {
-      font-family: "Open Sans", sans-serif;
-      font-size: 1.3rem;
-      width: 27em;
-      margin: 1em 0;
-    }
-
-
-    .text button {
-      color: hsl(257, 40%, 49%);
-      width: 200px;
-      height: 50px;
-      border-radius: 25px;
-      border: none;
-      font-size: 1.5em;
-      box-shadow: 2px 2px 5px hsl(0, 2%, 26%);
-      transition: background-color 0.7s;
-    }
-
-    .text button:hover,
-    li:hover {
-      background-color: hsl(300, 69%, 71%);
-      color: white;
-      cursor: pointer;
-    }
-
-
-    ul {
-      display: flex;
-      justify-content: flex-end;
-      gap: 1em;
-      margin: 2em 2.5em;
-    }
-
-    li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      list-style: none;
-      width: 50px;
-      height: 50px;
-      border: 1px solid white;
-      border-radius: 50%;
-      transition: background-color 0.7s;
-    }
-
-    
-
-    i {
-        font-size: 20px;
-      }
-
-    @media screen and (max-width: 700px) {
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Outfit:wght@100..900&display=swap");
 
       body {
-      background-image: url(images/bg-mobile.svg);
-    }
-
-      .container {
-        flex-direction: column;
-        align-items: center;
-        margin: 2.5em;
-        margin-bottom: 5em;
-        align-items: start;
+        background-image: url(images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: hsl(257, 40%, 49%);
+        color: white;
       }
 
-      .container img {
+      .logo {
+        margin: 2.5em;
+        margin-bottom: 5em;
+      }
+
+      .container {
+        display: flex;
+        gap: 56px;
+        padding: 64px;
+      }
+
+      .image-container {
+        flex: 4;
+      }
+
+      .image-container img {
+        min-width: 500px;
         width: 100%;
       }
 
       .text {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        flex: 3;
+        display: flex;
+        flex-direction: column;
       }
 
-
       .text h1 {
-        font-size: 2em;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 3rem;
+        width: 13em;
+        object-fit: contain;
       }
 
       .text p {
-        font-size: 1.1em;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.3rem;
+        width: 29em;
+        margin: 1em 0;
       }
 
       .text button {
-        width: 15em;
-      } 
-
-       ul {
-        justify-content: center;
+        color: hsl(257, 40%, 49%);
+        width: 200px;
+        height: 50px;
+        border-radius: 25px;
+        border: none;
+        font-size: 1.5em;
+        box-shadow: 2px 2px 5px hsl(0, 2%, 26%);
+        transition: background-color 0.7s;
       }
 
-     
-    }
-  </style>
-</head>
+      .text button:hover,
+      li:hover {
+        background-color: hsl(300, 69%, 71%);
+        color: white;
+        cursor: pointer;
+      }
 
-<body>
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1em;
+        padding: 2em 2.5em;
+      }
 
-  <header class="logo">
-    <img src="images/logo.svg" alt="a logo">
-  </header>
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        width: 50px;
+        height: 50px;
+        border: 1px solid white;
+        border-radius: 50%;
+        transition: background-color 0.7s;
+      }
 
-  <main class="container">
-    <img src="images/illustration-mockups.svg" alt="mockup">
-    <div class="text">
-      <h1>Build The Community Your Fans Will Love</h1>
-      <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create
-        connections with your users as you engage in genuine discussions.</p>
-      <button>Register</button>
-    </div>
-  </main>
+      i {
+        font-size: 20px;
+      }
 
+      @media screen and (max-width: 700px) {
+        body {
+          background-image: url(images/bg-mobile.svg);
+        }
 
-  <footer>
-    <ul>
-      <li><i class="fa-brands fa-facebook-f"></i></li>
-      <li><i class="fa-brands fa-twitter"></i></li>
-      <li><i class="fa-brands fa-instagram"></i></li>
-    </ul>
+        .logo {
+          margin: 1em;
+          margin-bottom: 0;
+        }
 
-  </footer>
-</body>
+        .logo img {
+          width: 100px;
+        }
 
+        .container {
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 1em;
+        }
+
+        .container img {
+          width: 100%;
+          min-width: 300px;
+        }
+
+        .text {
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+
+        .text h1 {
+          font-size: 2em;
+        }
+
+        .text p {
+          font-size: 1.1em;
+          width: 19em;
+        }
+
+        .text button {
+          width: 50%;
+          font-size: 1.18em;
+        }
+
+        ul {
+          justify-content: center;
+          margin: 0;
+        }
+
+        footer {
+          position: static;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="logo">
+      <img src="images/logo.svg" alt="a logo" />
+    </header>
+
+    <main class="container">
+      <div class="image-container">
+        <img src="images/illustration-mockups.svg" alt="mockup" />
+      </div>
+      <div class="text">
+        <h1>Build The Community Your Fans Will Love</h1>
+        <p>
+          Huddle re-imagines the way we build communities. You have a voice, but
+          so does your audience. Create connections with your users as you
+          engage in genuine discussions.
+        </p>
+        <button>Register</button>
+      </div>
+    </main>
+
+    <footer>
+      <ul>
+        <li><i class="fa-brands fa-facebook-f"></i></li>
+        <li><i class="fa-brands fa-twitter"></i></li>
+        <li><i class="fa-brands fa-instagram"></i></li>
+      </ul>
+    </footer>
+  </body>
 </html>
